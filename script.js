@@ -99,10 +99,7 @@ function updateFormattedDate() {
   realDateInput.addEventListener("change", updateFormattedDate);
 
 //Line chart
-const incomeExpense = document.getElementById("incomeExpenseLineChart")
-
-if(incomeExpense) {
-const ctxLine = incomeExpense.getContext("2d");
+const ctxLine = document.getElementById("incomeExpenseLineChart").getContext("2d");
 const incomeExpenseLineChart = new Chart(ctxLine, {
   type: "line",
   data: {
@@ -154,13 +151,9 @@ const incomeExpenseLineChart = new Chart(ctxLine, {
     },
   },
 });
-}
 
 //Doughnut Chart
-const doughnutCategory = document.getElementById("doughnutChart");
-
-if(doughnutCategory) {
-const doughCtx = doughnutCategory.getContext("2d");
+const doughCtx = document.getElementById("doughnutChart").getContext("2d");
 const doughnutChart = new Chart(doughCtx, {
   type: "doughnut",
   data: {
@@ -183,7 +176,6 @@ const doughnutChart = new Chart(doughCtx, {
     responsive: true,
   },
 });
-}
 
 // Change the color based on theme
 function updateChartBorderColorForTheme() {
