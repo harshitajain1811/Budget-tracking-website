@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.classList.remove("light-theme");
     toggleBtn.textContent = "Dark 🌙";
   }
+  updateChartBorderColorForTheme();
 });
 
 //Toggle between dark and light mode
