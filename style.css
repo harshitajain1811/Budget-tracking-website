@@ -11,6 +11,7 @@ html {
   overflow-x: clip;
 }
 
+/* Dark theme website colors */
 :root {
   --bg-color: #121212;
   --text-color: #ffffff;
@@ -29,12 +30,12 @@ body {
   overflow-x: clip;
 }
 
+/* Navbar */
 .nav-header,
 .hero {
   background-color: var(--card-bg);
 }
 
-/* Navbar */
 .nav-header {
   display: flex;
   text-align: center;
@@ -303,7 +304,7 @@ body {
   border-radius: 5px;
 }
 
-/* --------------------------------FAQ Section-------------------------------- */
+/* FAQ Section */
 .faq-section {
   padding: 5rem;
   background-color: var(--secondary-bg-color);
@@ -697,7 +698,6 @@ body {
   text-align: center;
 }
 
-/* Card Styling */
 .card {
   background-color: var(--card-bg);
   padding: 1.5rem;
@@ -705,7 +705,6 @@ body {
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
 }
 
-/* Specific Sections */
 .balance h3,
 .income h3,
 .expenses h3,
@@ -999,7 +998,7 @@ body {
   font-weight: bold;
 }
 
-/* Responsive */
+/* Responsiveness */
 @media only screen and (max-width: 1160px) {
   .video-section {
     padding: 4rem;
@@ -1342,6 +1341,7 @@ body {
   }
 }
 
+/* Light theme website colors */
 body.light-theme {
   --bg-color: #f8f9fa;
   --secondary-bg-color: #fff;

@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+//Toggle between dark and light mode
 toggleBtn.addEventListener("click", () => {
   document.body.classList.toggle("light-theme");
   const isLight = document.body.classList.contains("light-theme");
@@ -66,6 +67,7 @@ const realDateInput = document.getElementById("realDateInput");
 const formattedDate = document.getElementById("formattedDate");
 const dateWrapper = document.getElementById("dateWrapper");
 
+//Format date to displayed on dashboard
 function formatDate(dateString) {
   const date = new Date(dateString);
   const options = {
@@ -84,9 +86,9 @@ function updateFormattedDate() {
 }
 
 // Initialize with today's date
-if (realDateInput) {
   const today = new Date().toISOString().split("T")[0];
   realDateInput.value = today;
+  updateFormattedDate();
 
   // Open calendar on wrapper click
   dateWrapper.addEventListener("click", () => {
@@ -94,8 +96,8 @@ if (realDateInput) {
   });
 
   realDateInput.addEventListener("change", updateFormattedDate);
-}
 
+//Line chart
 const incomeExpense = document.getElementById("incomeExpenseLineChart")
 
 if(incomeExpense) {
@@ -182,10 +184,10 @@ const doughnutChart = new Chart(doughCtx, {
 });
 }
 
+// Change the color based on theme
 function updateChartBorderColorForTheme() {
   const isLight = document.body.classList.contains("light-theme");
-
-  // Change the border color based on theme
+  
   doughnutChart.data.datasets[0].borderColor = isLight ? "#E9ECEF" : "#2c2c2c";
 
   incomeExpenseLineChart.options.scales.x.grid.color = isLight ? "#d2d4d7" : "#121212"; // X-axis grid lines
