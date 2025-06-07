@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Budget Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <link rel="icon" type="image/png" href="images/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Budgetrackr" />
+    <link rel="manifest" href="images/site.webmanifest" />
+  </head>
+  <body>
+    <header class="nav-header">
+      <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+      <h1 class="logo">Budgetrackr</h1>      
+      <nav class="navbar" id="nav-links">
+          <a href="index.html">Home</a>
+          <a href="dashboard.html">Dashboard</a>
+          <a href="expense.html">Add Expense</a>
+          <a href="transaction.html">Transactions</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Contact</a>
+      </nav>
+      <div class="right">
+          <button id="theme-toggle">Dark 🌙</button>
+      </div>
+    </header>
+
+    <section class="hero" id="hero">
+      <div class="hero-text">
+        <h2>Spend Smart. Live Better.</h2>
+        <p>
+          A sleek way to visualize your spending and align it with what matters
+          most.
+        </p>
+        <button class="cta">Track Expenses</button>
+        <button id="login-signup" class="cta secondary">Login</button>
+      </div>
+      <div class="hero-image">
+        <img src="images/hero-bg.jpg" alt="Budget Image" />
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="feature">
+        <i class="fas fa-chart-line"></i>
+        <h3>Real-Time Insights</h3>
+        <p>Stay updated with your spending habits instantly.</p>
+      </div>
+      <div class="feature">
+        <i class="fas fa-wallet"></i>
+        <h3>Budget Planning</h3>
+        <p>Create and maintain monthly budget goals easily.</p>
+      </div>
+      <div class="feature">
+        <i class="fas fa-shield-alt"></i>
+        <h3>Secure & Private</h3>
+        <p>Your financial data is always safe and encrypted.</p>
+      </div>
+    </section>
+
+    <section class="video-section">
+      <div class="video-wrapper">
+        <video controls>
+          <source src="" type="video/mp4" />
+        </video>
+      </div>
+      <div class="video-text">
+        <h3>Track Every Penny with Ease</h3>
+        <p>
+          Managing your finances doesn't have to be complicated.<br /><br />
+          Our budget tracker helps you visualize your expenses, set monthly
+          goals, and stay in control—without the stress.<br /><br />
+          From groceries to subscriptions, every expense is
+          tracked in one place. Whether you're planning for a vacation or saving
+          for a big purchase, it's all just a click away. Start your journey to
+          smarter money management today!
+        </p>
+      </div>
+    </section>
+
+    <section class="pricing">
+      <h2>Our Pricing Plans</h2>
+
+      <div class="price-body">
+        <div class="price-card">
+          <h3>Free</h3>
+          <ul>
+            <li><i class="fa-solid fa-circle-check"></i>Track expenses</li>
+            <li><i class="fa-solid fa-circle-check"></i>Monthly budget</li>
+            <li><i class="fa-solid fa-circle-check"></i>Email support</li>
+          </ul>
+          <button>Select Plan</button>
+        </div>
+
+        <div class="price-card popular">
+          <h3>Standard - $10/mo</h3>
+          <ul>
+            <li><i class="fa-solid fa-circle-check"></i>Everything in Basic</li>
+            <li><i class="fa-solid fa-circle-check"></i>Advanced analytics</li>
+            <li><i class="fa-solid fa-circle-check"></i>Custom categories</li>
+          </ul>
+          <button>Select Plan</button>
+        </div>
+
+        <div class="price-card">
+          <h3>Premium - $20/mo</h3>
+          <ul>
+            <li>
+              <i class="fa-solid fa-circle-check"></i>All features unlocked
+            </li>
+            <li><i class="fa-solid fa-circle-check"></i>Priority support</li>
+            <li><i class="fa-solid fa-circle-check"></i>Unlimited budgets</li>
+          </ul>
+          <button>Select Plan</button>
+        </div>
+      </div>
+    </section>
+  
+    <section class="faq-section" id="faq">
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq">
+        <input type="checkbox" id="faq1">
+        <label for="faq1" class="faq-title">What is a budget tracker?</label>
+        <div class="faq-content">
+          <p>A budget tracker helps you monitor your income and expenses, allowing you to manage your money more efficiently.</p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <input type="checkbox" id="faq2">
+        <label for="faq2" class="faq-title">Is my financial data secure?</label>
+        <div class="faq-content">
+          <p>Yes, we use advanced encryption and privacy measures to ensure your data is safe and protected.</p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <input type="checkbox" id="faq3">
+        <label for="faq3" class="faq-title">Can I use the tracker on mobile devices?</label>
+        <div class="faq-content">
+          <p>Absolutely! Our budget tracker is fully responsive and works seamlessly on phones and tablets.</p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <input type="checkbox" id="faq4">
+        <label for="faq4" class="faq-title">Can I export my data?</label>
+        <div class="faq-content">
+          <p>Yes, you can easily export your budget data in CSV or PDF formats for external use.</p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <input type="checkbox" id="faq5">
+        <label for="faq5" class="faq-title">Is the tracker free to use?</label>
+        <div class="faq-content">
+          <p>Our basic version is free with optional premium features for advanced tracking and analytics.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- About Us -->
+        <div class="footer-column">
+          <h3>About Us</h3>
+          <p>
+            We help you take control of your finances with clean, simple
+            budgeting tools.
+          </p>
+          <p>
+            Our goal is to make managing your money less stressful and more
+            effective.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="expense.html">Add Expense</a></li>
+            <li><a href="transaction.html">Transactions</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact & Social -->
+        <div class="footer-column" id="contact">
+          <h3>Contact Us</h3>
+          <p>Email: support@example.com</p>
+          <p>Phone: +1 (234) 567-890</p>
+          <div class="social-icons">
+            <a href="www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+            <a href="www.gmail.com"><i class="fas fa-envelope"></i></a>
+            <a href="www.instagram.com"><i class="fab fa-instagram"></i></a>
+            <a href="www.whatsapp.com"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 BudgetTrackr. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+  <script src="script.js"></script>
+</html>

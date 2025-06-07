@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <link rel="icon" type="image/png" href="images/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Budgetrackr" />
+    <link rel="manifest" href="images/site.webmanifest" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Budget Tracker</title>
+  </head>
+  <body>
+    <header class="nav-header">
+      <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+      <h1 class="logo">Budgetrackr</h1>
+      <nav class="navbar" id="nav-links">
+        <a href="index.html">Home</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="expense.html">Add Expense</a>
+        <a href="transaction.html">Transactions</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="right">
+        <button id="theme-toggle">Dark 🌙</button>
+      </div>
+    </header>
+
+    <div class="dashboard">
+      <!-- Sidebar -->
+      <aside class="dashboard-sidebar">
+        <ul>
+          <li>January</li>
+          <li>February</li>
+          <li>March</li>
+          <li>April</li>
+          <li>May</li>
+          <li>June</li>
+          <li>July</li>
+          <li>August</li>
+          <li>September</li>
+          <li>October</li>
+          <li>November</li>
+          <li>December</li>
+        </ul>
+      </aside>
+
+      <!-- Dashboard Header -->
+      <header class="dashboard-header">
+        <h2>Welcome, User!</h2>
+        <div class="date-picker-wrapper" id="dateWrapper">
+          <i class="fa-solid fa-calendar-days"></i>
+          <input type="date" id="realDateInput" />
+          <input type="text" id="formattedDate" readonly />
+        </div>
+      </header>
+
+      <!-- Main Content -->
+      <main class="dashboard-main">
+        <!-- Balance & Income -->
+        <section class="card net-worth">
+          <h3>Total Net Worth</h3>
+          <p>₹2,45,000</p>
+        </section>
+
+        <section class="card balance">
+          <div class="heading">
+            <i class="fa-solid fa-hand-holding-dollar"></i>
+            <h3>Balance</h3>
+          </div>
+          <p>₹45,000</p>
+        </section>
+
+        <section class="card income">
+          <div class="heading">
+            <i class="fa-solid fa-sack-dollar"></i>
+            <h3>Income</h3>
+          </div>
+          <p>₹22,000</p>
+        </section>
+
+        <section class="card expenses">
+          <div class="heading">
+            <i class="fa-solid fa-wallet"></i>
+            <h3>Expenses</h3>
+          </div>
+          <p>₹15,000</p>
+        </section>
+
+        <!-- Recent Transactions -->
+        <section class="card recent-transactions">
+          <h3>Recent Transactions</h3>
+          <ul>
+            <li>
+              <span>Groceries</span>
+              <span>-₹2,000</span>
+            </li>
+            <li>
+              <span>Salary</span>
+              <span>+₹40,000</span>
+            </li>
+            <li>
+              <span>Utilities</span>
+              <span>-₹1,200</span>
+            </li>
+          </ul>
+        </section>
+
+        <!-- Monthly Budget Tracker -->
+        <section class="card monthly-budget">
+          <h4>55%</h4>
+          <h3>Income Goal</h3>
+          <div class="heading">
+            <p>Progress to month</p>
+            <p>₹22,000 / 40,000</p>
+          </div>
+          <progress value="22000" max="40000"></progress>
+        </section>
+
+        <!-- Income vs Expense Graph -->
+        <section class="card income-expense-graph">
+          <h3>Income vs Expense</h3>
+          <div class="graph"><canvas id="incomeExpenseLineChart"></canvas></div>
+        </section>
+
+        <!-- Expense by Category -->
+        <section class="card expense-category">
+          <h3>Expenses by Category</h3>
+          <div class="graph">
+            <canvas id="doughnutChart"></canvas>
+            <div class="chart-legend">
+              <div><span style="background-color: #f72585"></span> Food</div>
+              <div><span style="background-color: #b5179e"></span> Rent</div>
+              <div><span style="background-color: #7209b7"></span> Bills</div>
+              <div><span style="background-color: #560bad"></span> Entertainment</div>
+              <div><span style="background-color: #480ca8"></span> Other</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Alerts / Notifications -->
+        <section class="card alerts">
+          <div class="heading">
+            <i class="fa-solid fa-comments"></i>
+            <h3>Alerts & Notifications</h3>
+          </div>
+          <ul>
+            <li>Budget limit approaching for Groceries</li>
+            <li>New transaction added in Travel</li>
+          </ul>
+        </section>
+      </main>
+
+      <!-- Export / Download -->
+      <section class="export-tools">
+        <button>Download CSV</button>
+        <button>Export PDF</button>
+      </section>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- About Us -->
+        <div class="footer-column">
+          <h3>About Us</h3>
+          <p>
+            We help you take control of your finances with clean, simple
+            budgeting tools.
+          </p>
+          <p>
+            Our goal is to make managing your money less stressful and more
+            effective.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="expense.html">Add Expense</a></li>
+            <li><a href="transaction.html">Transactions</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact & Social -->
+        <div class="footer-column" id="contact">
+          <h3>Contact Us</h3>
+          <p>Email: support@example.com</p>
+          <p>Phone: +1 (234) 567-890</p>
+          <div class="social-icons">
+            <a href="www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+            <a href="www.gmail.com"><i class="fas fa-envelope"></i></a>
+            <a href="www.instagram.com"><i class="fab fa-instagram"></i></a>
+            <a href="www.whatsapp.com"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 BudgetTrackr. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+  <script src="script.js"></script>
+</html>
